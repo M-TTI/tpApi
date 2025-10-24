@@ -1,0 +1,36 @@
+@tpApi_HostAddress = http://localhost:5296
+@token = 123456
+@id = 3
+
+# List
+GET {{tpApi_HostAddress}}/forecasts/
+Accept: application/json
+Authorization: Bearer {{token}}
+
+###
+
+# Show
+GET {{tpApi_HostAddress}}/forecasts/{{id}}
+Accept: application/json
+Authorization: Bearer {{token}}
+
+###
+
+# Create
+POST {{tpApi_HostAddress}}/forecasts
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "city": "Paris",
+  "temperature": 22.5,
+  "condition": "Sunny",
+  "date": "2025-10-24T11:18:14.984Z"
+}
+
+###
+
+# Delete
+DELETE {{tpApi_HostAddress}}/forecasts/{{id}}
+Accept: application/json
+Authorization: Bearer {{token}}
