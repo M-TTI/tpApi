@@ -1,6 +1,6 @@
-# tpApi - API de Prévisions Météo
+# tpApi
 
-API REST développée avec ASP.NET Core 9.0 pour gérer des prévisions météorologiques.
+Une API REST développée avec ASP.NET Core 9.0 pour un TP de dev API.
 
 ## Prérequis
 
@@ -204,4 +204,4 @@ En mode développement, l'application active automatiquement :
 
 ## Licence
 
-Ce projet est un travail pratique (TP) à des fins éducatives.
+Faites en ce que vous voulez.
