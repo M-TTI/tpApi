@@ -8218,25 +8218,24 @@
     ]
   },
   "packageFolders": {
-    "/home/mtti/.nuget/packages/": {}
+    "/home/runner/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/mtti/ynov/dev-api/tpApi/tpApi/tpApi.csproj",
+      "projectUniqueName": "/home/runner/work/tpApi/tpApi/tpApi/tpApi.csproj",
       "projectName": "tpApi",
-      "projectPath": "/home/mtti/ynov/dev-api/tpApi/tpApi/tpApi.csproj",
-      "packagesPath": "/home/mtti/.nuget/packages/",
-      "outputPath": "/home/mtti/ynov/dev-api/tpApi/tpApi/obj/",
+      "projectPath": "/home/runner/work/tpApi/tpApi/tpApi/tpApi.csproj",
+      "packagesPath": "/home/runner/.nuget/packages/",
+      "outputPath": "/home/runner/work/tpApi/tpApi/tpApi/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/mtti/.nuget/NuGet/NuGet.Config"
+        "/home/runner/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
-        "/usr/lib64/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -8255,7 +8254,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net9.0": {
@@ -8309,7 +8308,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/9.0.110/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.305/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
