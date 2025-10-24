@@ -19,6 +19,8 @@ builder.Services.AddControllers()
     });
 
 builder.Services.AddOpenApi();
+
+// Doc swagger accessible à http://localhost:5296
 builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new OpenApiInfo

@@ -1,6 +1,7 @@
 @tpApi_HostAddress = http://localhost:5296
 @token = 123456
-@id = 3
+# id à changer en fonction du test
+@id = 2
 
 # List
 GET {{tpApi_HostAddress}}/forecasts/
