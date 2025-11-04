@@ -4,12 +4,8 @@ using tpApi.Models;
 
 namespace tpApi.Data;
 
-public class AppDbContext : DbContext
+public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
 {
-    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
-    {
-    }
-    
     public DbSet<Forecast> Forecasts { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -11,12 +11,15 @@ public class TokenAuthAttribute : Attribute, IAuthorizationFilter
 
         if (string.IsNullOrEmpty(apiToken))
         {
-            context.Result = new StatusCodeResult(StatusCodes.Status500InternalServerError);
+            context.Result = new ObjectResult(new { error = "No token in .env" })
+            {
+                StatusCode = StatusCodes.Status500InternalServerError,
+            };
             
             return;
         }
 
-        var authHeader = context.HttpContext.Request.Headers["Authorization"].FirstOrDefault();
+        var authHeader = context.HttpContext.Request.Headers.Authorization.FirstOrDefault();
 
         if (string.IsNullOrEmpty(authHeader) || !authHeader.StartsWith("Bearer "))
         {
@@ -31,7 +34,7 @@ public class TokenAuthAttribute : Attribute, IAuthorizationFilter
         {
             context.Result = new ObjectResult(new { error = "Invalid Token" })
             {
-                StatusCode = StatusCodes.Status403Forbidden
+                StatusCode = StatusCodes.Status403Forbidden,
             };
             
             return;

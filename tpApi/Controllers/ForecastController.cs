@@ -9,15 +9,8 @@ namespace tpApi.Controllers;
 [ApiController]
 [Route("/forecasts")]
 [TokenAuth]
-public class ForecastController : ControllerBase
+public class ForecastController(AppDbContext _context) : ControllerBase
 {
-    private readonly AppDbContext _context;
-
-    public ForecastController(AppDbContext context)
-    {
-        _context = context;
-    }
-
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Forecast>>> List()
     {
