@@ -71,16 +71,16 @@ Pour lancer l'application en mode développement :
 dotnet run --project tpApi/tpApi.csproj
 ```
 
-L'application démarre et affiche l'URL d'écoute :
+L'application démarre et affiche les URLs d'écoute :
 - `http://localhost:5296`
-- HTTPS non supporté pour le moment
+- `https://localhost:7042`
 
 ## Accéder à la documentation API (Swagger)
 
 En mode développement, l'interface Swagger est disponible automatiquement :
 
 1. Lancez l'application
-2. Ouvrez votre navigateur à l'adresse : `http://localhost:5296`
+2. Ouvrez votre navigateur à l'adresse : `http://localhost:5296` (ou `https://localhost:7042` pour https)
 3. L'interface Swagger UI s'affiche directement à la racine
 
 La documentation Swagger permet de :
