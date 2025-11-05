@@ -29,6 +29,32 @@ builder.Services.AddSwaggerGen(options =>
         Version = "v1",
         Description = "J'essaie de génerer une doc"
     });
+    
+    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        Type = SecuritySchemeType.ApiKey,
+        Scheme = "Bearer",
+        BearerFormat = "6 digits code",
+        In = ParameterLocation.Header,
+        Description = "Entrez votre clé dans le format suivant : Bearer {token}"
+        
+    });
+    
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer",
+                }
+            },
+            []
+        }
+    });
 });
 
 

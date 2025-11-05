@@ -8,6 +8,7 @@ namespace tpApi.Controllers;
 
 [ApiController]
 [Route("/forecasts")]
+[Produces("application/json")]
 [TokenAuth]
 public class ForecastController(AppDbContext _context) : ControllerBase
 {
