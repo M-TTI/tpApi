@@ -7,6 +7,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 Env.Load();
 
+builder.Services.AddHttpsRedirection(options =>
+{
+    options.HttpsPort = 7042;
+});
+
 // Add services to the container.
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
