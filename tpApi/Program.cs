@@ -63,7 +63,7 @@ builder.Services.AddSwaggerGen(options =>
 });
 
 
-
+// on build l'app
 var app = builder.Build();
 
 // Create db if it doesn't exist
